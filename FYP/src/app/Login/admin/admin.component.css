@@ -1,0 +1,11 @@
+h3{
+    font-size: 3rem;
+    margin: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header{
+    background-color: rgb(134, 170, 172);
+}
+form{
+    background-color: cornsilk;
+}

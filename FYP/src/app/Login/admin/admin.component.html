@@ -1,0 +1,45 @@
+<div
+  class="header"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  fxLayoutGap="20px"
+>
+  <h3 [ngStyle]="{ color: 'black' }">Login</h3>
+</div>
+<form fxLayout="column" fxLayoutAlign="center center">
+  <div
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    style="margin-top: 25px"
+    fxLayoutGap="20px"
+  >
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="Ex. pat@example.com" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="email" matInput />
+    </mat-form-field>
+  </div>
+  <div fxLayout="column"fxLayoutGap="20px">
+    <label>Login as</label>
+    <mat-radio-group fxLayout="row">
+      <mat-radio-button
+        style="margin: 5px"
+        *ngFor="let login of logins"
+        [value]="login"
+      >
+        {{ login }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <button style="margin: 25px" mat-raised-button color="accent">
+      Submit
+    </button>
+    <button style="margin-left: 5px" mat-raised-button color="warn">
+      Cancel
+    </button>
+  </div>
+</form>
